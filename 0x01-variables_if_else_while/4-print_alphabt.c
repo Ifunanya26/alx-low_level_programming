@@ -4,34 +4,20 @@
 
 /**
  * main - Prints the alphabet without q and e.
- * @void: Empty parameter list for main.
  *
- * Description: Prints the alphabet in lower case
- * Skip q and e
- * Can only use putchar
- *
- * Return: 0 for success
-*/
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-	char letter = 'a';
+	int i;
 
-	while (letter <= 'z')
+	for (i = 97; i < 123; i++)
 	{
-	   if (letter == 'q')
-	   {
-	        letter++;
-	   }
-	   else if (letter == 'e')
-	  {
-		  letter++;
-	  }
-	   else
-	  {
-                  putchar(letter);
-                  letter++;
-	  }
-      }
-      putchar('\n');
-      return (0);
+		if (i != 101 && i != 113)
+		{
+			putchar(i);
 		}
+	}
+	putchar('\n');
+	return (0);
+}
