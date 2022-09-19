@@ -1,46 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #include "main.h"
 
 /**
- * _atoi - converts a string to an integer
- * @s: string to be converted
+ * main - entry point
  *
- * Return: the int converted fromthe string
+ * Return: generated password
  */
-int _atoi(char *s)
+
+int main(void)
 {
-	int i, d, n, len, f, digit;
+	char c;
+	int x;
 
-	i = 0;
-	d = 0;
-	n = 0;
-	len = 0;
-	f = 0;
-	digit = 0;
-
-	while (s[len] != '\0')
-		len++;
-
-	while (i < len && f == 0)
+	srand(time(0));
+	while (x <= 2645)
 	{
-		if (s[i] == '-')
-			++d;
-
-		if (s[i] >= '0' && s[i] <= '9')
-		{
-			digit = s[i] - '0';
-			if (d % 2)
-				digit = -digit;
-			n = n * 10 + digit;
-			f = 1;
-			if (s[i + 1] < '0' || s[i + 1] > '9')
-				break;
-			f = 0;
-		}
-		i++;
+		c = rand() % 128;
+		x += c;
+		putchar(c);
 	}
+	putchar(2772 - x);
 
-	if (f == 0)
-		return (0);
-
-	return (n);
+	return (0);
 }
