@@ -24,7 +24,7 @@ int compare_to(char *s, int a, int b)
 {
 	if (*(s + a) == *(s + b))
 	{
-		if (a == b || a == b +1)
+		if (a == b || a == b + 1)
 			return (1);
 		return (0 + compare_to(s, a + 1, b - 1));
 	}
