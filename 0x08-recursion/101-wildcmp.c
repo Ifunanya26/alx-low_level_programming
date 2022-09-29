@@ -7,7 +7,7 @@
  *
  * Return: 1 if the strings are identical and 0 if they are not.
  */
-int wildcmp(char *s2, char *s2)
+int wildcmp(char *s1, char *s2)
 {
 	if (*s2 == '*' && *(s2 + 1) != '\0' && *s1 == '\0')
 		return (0);
