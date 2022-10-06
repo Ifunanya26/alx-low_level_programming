@@ -30,7 +30,7 @@ void *_calloc(unsigned int nmedb, unsigned int size)
 
 	if (nmedb == 0 || size == 0)
 		return (NULL);
-	p = malloc(nmedb *size);
+	p = malloc(nmedb * size);
 
 	if (p == NULL)
 		return (NULL);
