@@ -20,20 +20,20 @@ char *_memset(char *s, char b, unsigned int n)
 
 /**
  * _calloc - allocates memory for an array using malloc
- * @nmemb: n elements
+ * @nmedb: n elements
  * @size: bytes
  * Return: pointer
  */
-void *_calloc(unsigned int nmemb, unsigned int size)
+void *_calloc(unsigned int nmedb, unsigned int size)
 {
 	void *p;
 
-	if (nmemb == 0 || size == 0)
+	if (nmedb == 0 || size == 0)
 		return (NULL);
-	p = malloc(nmemb *size);
+	p = malloc(nmedb *size);
 
 	if (p == NULL)
 		return (NULL);
-	_memset(p, 0, (nmemb * size ));
+	_memset(p, 0, (nmedb * size ));
 	return (p);
 }
